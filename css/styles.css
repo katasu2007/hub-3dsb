@@ -1,26 +1,36 @@
 :root {
-  --bg: #070a15;
-  --panel: #0f1630;
-  --panel2: #0b1124;
-  --line: #222c55;
-  --line2: #33407a;
-  --tx: #e8edfb;
-  --mut: #9ba7ce;
-  --cy: #22d3ee;
-  --mg: #f046d2;
-  --am: #ffb224;
-  --gr: #34f5a0;
+  /* ==========================================
+     PALETA DE COLORES (¡Modifícala aquí a tu gusto!)
+     ========================================== */
+  --bg: #070a15;          /* Color de fondo principal (Espacio profundo) */
+  --panel: #0f1630;       /* Color de fondo de las tarjetas y contenedores */
+  --panel2: #0b1124;      /* Color secundario para barras o pies de página */
+  --line: #222c55;        /* Color de los bordes y líneas divisorias */
+  --line2: #33407a;       /* Color de bordes secundarios */
+
+  --tx: #e8edfb;          /* Color del texto principal (Blanco estelar) */
+  --mut: #9ba7ce;         /* Color del texto secundario o descripciones */
+
+  /* Colores de acento tipo Neón / Cósmico */
+  --cy: #22d3ee;          /* Cian brillante (Principal / Botones) */
+  --mg: #f046d2;          /* Magenta cósmico (Detalles / Hover) */
+  --am: #ffb224;          /* Ámbar / Dorado (Alertas o destacados) */
+  --gr: #34f5a0;          /* Verde neón (Éxito / Activos) */
+
+  /* Tipografías */
   --fd: 'Orbitron', system-ui, sans-serif;
   --fb: 'Exo 2', system-ui, sans-serif;
   --fm: 'JetBrains Mono', monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
   font-family: var(--fb);
   background-color: var(--bg);
   color: var(--tx);
   line-height: 1.65;
+  /* Fondo con patrón estelar de puntos difuminados */
   background-image: 
     radial-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
     radial-gradient(rgba(240, 70, 210, 0.05) 1px, transparent 1px);

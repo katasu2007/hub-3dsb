@@ -2,7 +2,7 @@ const modulosData = [
     {
         codigo: "BTVDS 3.1",
         nombre: "Desarrollo de aplicaciones de software para la solución de problemas",
-        docente: "Profesor Javier Mineros",
+        docente: "Profesor Francisco Canales",
         descripcion: "Construcción y lógica de sistemas de software enfocados en resolver necesidades reales utilizando arquitecturas robustas.",
         instrumentos: ["Guías de laboratorio", "Rúbricas de evaluación de código", "Pruebas prácticas de escritorio"],
         programas: ["Visual Studio Community", "XAMPP", "SQL Server Management Studio", "VS Code"],
@@ -16,7 +16,7 @@ const modulosData = [
     {
         codigo: "BTVDS 3.5",
         nombre: "Desarrollo de componentes para dispositivos móviles",
-        docente: "Profesor Javier Mineros",
+        docente: "Profesor Francisco Canales",
         descripcion: "Creación de interfaces y componentes adaptados para arquitecturas móviles multiplataforma.",
         instrumentos: ["Listas de cotejo", "Evaluaciones de emulación móvil", "Pruebas de despliegue"],
         programas: ["Visual Studio", ".NET MAUI Workloads", "Android Emulator"],
@@ -29,7 +29,7 @@ const modulosData = [
     {
         codigo: "BTVDS 3.6",
         nombre: "Conversación de inglés sobre mantenimiento de sistemas informáticos",
-        docente: "Especialidad Técnica",
+        docente: "Profesor Francisco Canales",
         descripcion: "Aplicación de vocabulario técnico en inglés enfocado en soporte, diagnóstico y mantenimiento de equipos informáticos.",
         instrumentos: ["Rúbricas de exposición oral", "Simulaciones de soporte técnico en inglés"],
         programas: ["Plataformas de videoconferencia", "Lectores de documentación técnica"],
@@ -42,7 +42,7 @@ const modulosData = [
     {
         codigo: "BTVDS 3.7",
         nombre: "Puesta en marcha de la microempresa en asociatividad cooperativa",
-        docente: "Especialidad Técnica",
+        docente: "Profesor Francisco Canales",
         descripcion: "Estructuración y planificación de proyectos de emprendimiento bajo modelos asociativos y cooperativos.",
         instrumentos: ["Planes de negocio", "Matrices de evaluación cooperativa", "Modelos Canvas"],
         programas: ["Hojas de cálculo", "Herramientas de diagramación", "Editores de propuestas"],
