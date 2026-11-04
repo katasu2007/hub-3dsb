@@ -86,6 +86,7 @@ header {
   font-family: var(--fd);
   font-size: clamp(2rem, 4vw, 3rem);
   background: linear-gradient(135deg, var(--cy), var(--mg));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
