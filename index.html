@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUB 3DS-B - Cimientos del Portal</title>
+    <title>HUB 3DS-B · Portal de Repaso Interactivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">HUB 3DS-B</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#modulos">Módulos</a></li>
-            </ul>
-        </nav>
+        <span class="marca">HUB 3DS-B · INDEL</span>
+        <ul class="nav-links">
+            <li><a href="#modulos">Módulos</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Pages</a></li>
+        </ul>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <h1>Bienvenido al HUB de Repaso 3DS-B</h1>
-            <p>Portal educativo estático con evidencias, instrumentos y recursos del año académico.</p>
-        </section>
-
-        <section id="modulos" class="modulos-container">
-            <h2>Mapa de Módulos del Año</h2>
-            <div id="lista-modulos" class="grid-modulos">
-                <!-- Se poblará con JavaScript de forma provisional -->
-            </div>
-        </section>
+    <main class="hero">
+        <p class="inst">Instituto Nacional Cantón Lourdes (INDEL) · 3.º Bachillerato Técnico Vocacional en Desarrollo de Software «B»</p>
+        <h1>Portal de Repaso Integral</h1>
+        <p>Explora el mapa de módulos del año, revisa instrumentos, herramientas y evidencias con una experiencia interactiva espacial.</p>
     </main>
 
+    <div class="main-container" id="modulos">
+        <div class="controls-bar">
+            <input type="text" id="buscador" class="search-input" placeholder="Buscar módulo, herramienta o programa...">
+            <span id="contadorModulos" class="stats-counter">Mostrando todos los módulos</span>
+        </div>
+
+        <div id="gridModulos" class="grid-modulos">
+            <!-- Se poblará dinámicamente con JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal para la ficha detallada -->
+    <div id="modalFicha" class="modal-overlay">
+        <div class="modal-content">
+            <button id="cerrarModal" class="modal-close">&times;</button>
+            <div id="contenidoModal">
+                <!-- Contenido dinámico de la ficha -->
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Instituto Nacional Cantón Lourdes (INDEL) - 3.º Bachillerato Técnico Vocacional en Desarrollo de Software «B»</p>
+        <p><b>Guía y Portal 3DS-B</b> · Instituto Nacional Cantón Lourdes (INDEL)</p>
+        <p>Versión v1.0 · Creado con estándares web modernos y diseño espacial.</p>
     </footer>
 
     <script src="js/data.js"></script>
