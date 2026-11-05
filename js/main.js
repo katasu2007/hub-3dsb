@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 botonEstudioHtml = `<button class="btn-accion disabled" disabled>Bloqueado 🔒</button>`;
                 botonQuizHtml = `<button class="btn-accion disabled" disabled>Cuestionario Bloqueado</button>`;
             } else if (completado) {
-                // Si está completado, el botón de repaso dice "Repasar" y permite ver el contenido y herramientas
                 botonEstudioHtml = `<button class="btn-accion" onclick="iniciarEstudio(${mod.id})">Repasar</button>`;
                 botonQuizHtml = `<button class="btn-accion disabled" disabled>Nota: 10/10 (Aprobado)</button>`;
             } else {
@@ -105,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     botonEstudioHtml = `<button class="btn-accion" onclick="iniciarEstudio(${mod.id})">Estudiar Módulo</button>`;
                     botonQuizHtml = `<button class="btn-accion disabled" disabled>Estudia primero</button>`;
                 } else {
-                    // Si ya se estudió antes pero falta el 10, el botón dice "Repasar"
                     botonEstudioHtml = `<button class="btn-accion" onclick="iniciarEstudio(${mod.id})">Repasar</button>`;
                     botonQuizHtml = `<button class="btn-accion" onclick="iniciarQuiz(${mod.id})">Realizar Cuestionario</button>`;
                 }
@@ -134,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
         grid.innerHTML = html;
     }
 
-    // --- VISTA DE ESTUDIO Y REPASO (Muestra qué se hace y herramientas) ---
     window.iniciarEstudio = function(id) {
         const mod = modulosData.find(m => m.id === id);
         const progreso = obtenerProgreso();
@@ -143,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const completado = progreso[id].nota === 10;
 
-        // Si ya está completado, ocultamos el botón de ir al cuestionario o adaptamos la vista
         let botonSiguienteHtml = completado 
             ? `<button class="btn-accion" onclick="renderizarPaginaCompleta()" style="background: var(--pastel-mint); color: #065f46;">← Volver al listado</button>`
             : `<button class="btn-accion" onclick="iniciarQuiz(${mod.id})">Ir al Cuestionario del Módulo →</button>`;
@@ -161,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
                     <h3 style="color: var(--text-dark); font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">📋 ¿Qué se hace en este módulo? (Información Práctica)</h3>
-                    ${mod.estudiadoDetallado}
+                    ${mod.estudioDetallado}
 
                 </div>
                 <div style="margin-top: 2.5rem; display: flex; justify-content: flex-end; gap: 1rem;">
@@ -172,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo(0, 0);
     };
 
-    // --- CUESTIONARIOS INDIVIDUALES ---
     let moduloActivo = null;
     let preguntaActual = 0;
     let respuestasUsuario = [];
