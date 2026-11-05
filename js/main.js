@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (btnComenzarRuta) {
         btnComenzarRuta.addEventListener("click", () => {
-            seccionIntro.style.display = "none";
-            mainAppContainer.style.display = "block";
+            if (seccionIntro) seccionIntro.style.display = "none";
+            if (mainAppContainer) mainAppContainer.style.display = "block";
             renderizarPaginaCompleta();
             window.scrollTo(0, 0);
         });
@@ -42,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const totalCompletados = Object.values(progreso).filter(p => p.nota === 10).length;
         const porcentaje = Math.round((totalCompletados / 8) * 100);
 
+        if (!mainAppContainer) return;
+
         mainAppContainer.innerHTML = `
             <div class="dashboard-header">
                 <div class="dashboard-title-area">
@@ -61,9 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <div class="mode-selector">
-                <button class="btn-mode ${modoActual==='todos'?'active':''}" data-modo="todos">Ruta Completa</button>
-                <button class="btn-mode ${modoActual==='Arcides Canales'?'active':''}" data-modo="Arcides Canales">Profe Arcides</button>
-                <button class="btn-mode ${modoActual==='Javier Mineros'?'active':''}" data-modo="Javier Mineros">Profe Javier</button>
+                <button class="btn-mode ${modoActual==='todos'?'active':''}" data-modo="todos">Módulos</button>
+                <button class="btn-mode ${modoActual==='Arcides Canales'?'active':''}" data-modo="Arcides Canales">Módulos Profe Arcides</button>
+                <button class="btn-mode ${modoActual==='Javier Mineros'?'active':''}" data-modo="Javier Mineros">Módulos Profe Javier</button>
             </div>
             
             <div id="appContainer">
@@ -127,21 +129,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            html += `
-                <div class="card-modulo ${completado ? 'completado' : ''}">
-                    <div class="card-info" style="flex: 1; min-width: 280px;">
-                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
-                            <span style="font-weight: 800; color: var(--pastel-purple);">${mod.codigo}</span>
-                            <span style="color: var(--text-muted); font-size: 0.85rem;">(${mod.docente})</span>
-                            ${badgeHtml}
-                        </div>
-                        <h3>${mod.nombre}</h3>
-                        <p>${mod.resumenCorto}</p>
-                    </div>
+            let infoCabeceraHtml = "";
+            let accionesHtml = "";
+
+            // Si estamos en la pestaña general "Módulos", mostramos badges y botones de avance.
+            // Si estamos en el apartado de los profesores, solo mostramos el listado informativo limpio sin botones ni bloqueos.
+            if (modoActual === "todos") {
+                infoCabeceraHtml = `
+                    <span style="font-weight: 800; color: var(--pastel-purple);">${mod.codigo}</span>
+                    <span style="color: var(--text-muted); font-size: 0.85rem;">(${mod.docente})</span>
+                    ${badgeHtml}
+                `;
+                accionesHtml = `
                     <div class="card-actions">
                         ${botonEstudioHtml}
                         ${botonQuizHtml}
                     </div>
+                `;
+            } else {
+                infoCabeceraHtml = `
+                    <span style="font-weight: 800; color: var(--pastel-purple);">${mod.codigo}</span>
+                `;
+                accionesHtml = ""; // Sin botones ni estados en las pestañas de profesores
+            }
+
+            html += `
+                <div class="card-modulo ${completado && modoActual === 'todos' ? 'completado' : ''}">
+                    <div class="card-info" style="flex: 1; min-width: 280px;">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                            ${infoCabeceraHtml}
+                        </div>
+                        <h3>${mod.nombre}</h3>
+                        <p>${mod.resumenCorto}</p>
+                    </div>
+                    ${accionesHtml}
                 </div>
             `;
         });
@@ -161,6 +182,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let botonSiguienteHtml = completado 
             ? `<button class="btn-accion" onclick="renderizarPaginaCompleta()" style="background: var(--pastel-mint); color: #065f46;">← Volver al listado</button>`
             : `<button class="btn-accion" onclick="iniciarQuiz(${mod.id})">Ir al Cuestionario del Módulo →</button>`;
+
+        if (!mainAppContainer) return;
 
         mainAppContainer.innerHTML = `
             <div class="study-view">
@@ -212,6 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function mostrarPregunta() {
         const p = preguntasMezcladas[preguntaActual];
+        if (!mainAppContainer) return;
+
         mainAppContainer.innerHTML = `
             <div class="quiz-view">
                 <button class="btn-mode" onclick="renderizarPaginaCompleta()" style="margin-bottom: 1.5rem;">Cancelar y volver</button>
@@ -289,17 +314,9 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
 
-        mainAppContainer.innerHTML = `<div class="study-view">${mensajeHtml}</div>`;
+        if (mainAppContainer) {
+            mainAppContainer.innerHTML = `<div class="study-view">${mensajeHtml}</div>`;
+        }
         window.scrollTo(0, 0);
     };
-
-    modoBtns = document.querySelectorAll(".btn-mode");
-    modoBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            modoBtns.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            modoActual = btn.getAttribute("data-modo");
-            renderizarPaginaCompleta();
-        });
-    });
 });
