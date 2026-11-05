@@ -7,10 +7,8 @@ const modulosData = [
         estudioDetallado: `
             <h3>1. Introducción a las Arquitecturas de Software</h3>
             <p>En este módulo analizamos cómo estructurar programas informáticos complejos dividiéndolos en capas lógicas (Presentación, Negocio y Datos). Esto permite que el mantenimiento del software sea limpio, escalable y fácil de depurar ante cualquier fallo imprevisto.</p>
-            
             <h3>2. Conectividad Segura con PHP Data Objects (PDO)</h3>
             <p>Aprendimos a vincular aplicaciones web locales operadas mediante servidores Apache (XAMPP) utilizando PDO en PHP. A diferencia de las conexiones tradicionales antiguas, PDO nos otorga capas de abstracción para prevenir inyecciones SQL mediante consultas preparadas, protegiendo la integridad de la base de datos.</p>
-            
             <h3>3. Sistemas de Inventario y Lógica de Negocio</h3>
             <p>Desarrollamos componentes de escritorio utilizando C# y Windows Forms, implementando puntos de venta que calculan subtotales automáticamente, restan existencias de stock en tiempo real en bases de datos relacionales (MySQL/SQL Server) y generan registros de transacciones exitosas.</p>
         `,
@@ -35,10 +33,8 @@ const modulosData = [
         estudioDetallado: `
             <h3>1. Ingeniería de Requerimientos y Acuerdos SLA</h3>
             <p>Un SLA (Service Level Agreement) es el contrato técnico formal que define con precisión quirúrgica qué entregará el desarrollador, los plazos de entrega, los estándares de rendimiento y las condiciones de soporte que el cliente espera recibir tras contratar los servicios informáticos.</p>
-            
             <h3>2. Gestión de Expectativas del Cliente</h3>
             <p>Aprendimos a redactar especificaciones sin ambigüedades para evitar cambios arbitrarios de alcance a mitad del desarrollo, asegurando que las horas invertidas por el programador tengan un marco legal y operativo transparente.</p>
-            
             <h3>3. Refactorización del Proyecto 'La Esquina del Sabor'</h3>
             <p>Aplicamos de forma práctica la plantilla SLA diseñada previamente para auditar y refactorizar el software del restaurante 'La Esquina del Sabor', corrigiendo fallas de arquitectura y añadiendo los requerimientos exactos solicitados por el docente.</p>
         `,
@@ -63,12 +59,8 @@ const modulosData = [
         estudioDetallado: `
             <h3>1. Bases de Datos Masivas en SQL Server</h3>
             <p>Estudiamos la administración avanzada de motores relacionales corporativos utilizando Microsoft SQL Server Management Studio (SSMS). Aprendimos a formular consultas complejas con múltiples uniones de tablas (JOINs), funciones de agregación y procedimientos almacenados eficientes.</p>
-            
             <h3>2. Inteligencia de Negocios (Business Intelligence)</h3>
             <p>Conectamos grandes volúmenes de datos transaccionales hacia plataformas de análisis visual como Microsoft Power BI. Esto nos permitió transformar filas de datos numéricos crudos en tableros interactivos (Dashboards) orientados a la gerencia.</p>
-            
-            <h3>3. Toma de Decisiones Basada en Datos</h3>
-            <p>La visualización analítica facilita la detección rápida de tendencias de ventas, rendimiento de productos y control operativo dentro de cualquier ecosistema empresarial moderno.</p>
         `,
         preguntas: [
             { t: "¿Qué lenguaje se utiliza para gestionar bases de datos en Microsoft SQL Server?", o: ["T-SQL", "JavaScript", "HTML", "CSS"], r: 0 },
@@ -91,9 +83,8 @@ const modulosData = [
         estudioDetallado: `
             <h3>1. Diversificación Tecnológica Multiplataforma</h3>
             <p>Comprendimos que un desarrollador de software integral debe adaptarse a distintos entornos. Estudiamos la construcción de aplicaciones ejecutables en múltiples sistemas operativos utilizando frameworks modernos como Avalonia UI, WPF, junto con la agilidad de Python y PHP.</p>
-            
             <h3>2. Sistemas de Planificación de Recursos (ERP)</h3>
-            <p>Analizamos la arquitectura y operación de un Enterprise Resource Planning (ERP) utilizando Odoo. Un ERP integra en una sola base de datos centralizada todos los departamentos críticos de una organización: inventarios, contabilidad, compras, ventas y recursos humanos.</p>
+            <p>Analizamos la arquitectura y operación de un Enterprise Resource Planning (ERP) utilizando Odoo. Un ERP integra en una sola base de datos centralizada todos los departamentos críticos de una organización.</p>
         `,
         preguntas: [
             { t: "¿Qué significa ERP en el ámbito de los sistemas de información?", o: ["Enterprise Resource Planning (Planificación de Recursos Empresariales)", "Easy Rapid Programming", "Electronic Relational Process", "External Routine Protocol"], r: 0 },
@@ -115,10 +106,9 @@ const modulosData = [
         herramientas: [".NET MAUI", "C#", "XAML", "Android SDK", "Visual Studio"],
         estudioDetallado: `
             <h3>1. Ecosistema de .NET MAUI para Móviles</h3>
-            <p>Este módulo se centró en el diseño y despliegue de aplicaciones móviles nativas y multiplataforma utilizando el SDK moderno de Microsoft .NET MAUI. Aprendimos a estructurar proyectos limpios capaces de ejecutarse tanto en móviles Android como en equipos de escritorio.</p>
-            
+            <p>Este módulo se centró en el diseño y despliegue de aplicaciones móviles nativas y multiplataforma utilizando el SDK moderno de Microsoft .NET MAUI.</p>
             <h3>2. Diseño de Interfaces Adaptables con XAML</h3>
-            <p>Utilizamos XAML (Extensible Application Markup Language) para maquetar interfaces visuales fluidas, aplicando controles contenedores como Grid, StackLayout y bindings de datos enlazados directamente a la lógica de negocio escrita en C#.</p>
+            <p>Utilizamos XAML (Extensible Application Markup Language) para maquetar interfaces visuales fluidas, aplicando controles contenedores como Grid, StackLayout y bindings de datos enlazados directamente a la lógica de negocio.</p>
         `,
         preguntas: [
             { t: "¿Qué framework multiplataforma oficial de Microsoft se utilizó para apps móviles?", o: [".NET MAUI", "DirectX", "Windows Forms clásico", "ASP.NET WebForms"], r: 0 },
@@ -126,7 +116,7 @@ const modulosData = [
             { t: "¿Qué IDE principal integra las herramientas de desarrollo para .NET MAUI?", o: ["Visual Studio Community", "NetBeans", "Xcode", "Android Studio exclusivo"], r: 0 },
             { t: "¿Qué lenguaje de programación maneja el código detrás (Code-Behind) en MAUI?", o: ["C#", "Java", "Objective-C", "PHP"], r: 0 },
             { t: "¿Qué emulador se requirió habitualmente para probar las aplicaciones móviles en PC?", o: ["Android Emulator", "Nintendo Switch Emulator", "DOSBox", "VirtualBox Linux"], r: 0 },
-            { t: "¿Qué significa que una aplicación seja 'multiplataforma móvil'?", o: ["Que puede compilarse y ejecutarse en Android e iOS (y escritorio) desde un mismo proyecto", "Que solo funciona sin internet", "Que no requiere código", "Que solo corre en Windows 95"], r: 0 },
+            { t: "¿Qué significa que una aplicación sea 'multiplataforma móvil'?", o: ["Que puede compilarse y ejecutarse en Android e iOS (y escritorio) desde un mismo proyecto", "Que solo funciona sin internet", "Que no requiere código", "Que solo corre en Windows 95"], r: 0 },
             { t: "¿Cómo se gestionan los elementos visuales organizados en filas y columnas en XAML?", o: ["Mediante layouts como Grid, StackLayout y FlexLayout", "Usando comandos de consola de SQL", "Con archivos de audio", "Con hojas de Excel"], r: 0 },
             { t: "¿Qué SDK se instala en Visual Studio para compilar aplicaciones móviles Android?", o: ["Android SDK y emuladores de Google", "SDK de impresoras láser", "Driver de tarjeta gráfica", "Paquete de Office 365"], r: 0 },
             { t: "El diseño responsivo en móviles busca:", o: ["Adaptar la interfaz correctamente a cualquier tamaño de pantalla o rotación", "Ocultar los botones principales", "Hacer la letra invisible", "Gastar más batería"], r: 0 },
@@ -140,8 +130,7 @@ const modulosData = [
         herramientas: ["Vocabulario IT", "Manuales en Inglés", "Soporte Técnico", "Helpdesk"],
         estudioDetallado: `
             <h3>1. Importancia del Inglés Técnico en la Informática</h3>
-            <p>La industria del desarrollo de software opera globalmente en inglés. En este módulo estudiamos manuales técnicos de fabricantes de hardware, interpretaciones de códigos de error (Error Logs) y documentación de APIs internacionales.</p>
-            
+            <p>La industria del desarrollo de software opera globalmente en inglés. En este módulo estudiamos manuales técnicos de fabricantes de hardware e interpretaciones de códigos de error.</p>
             <h3>2. Simulaciones de Soporte y Diagnóstico (Troubleshooting)</h3>
             <p>Practicamos la comunicación asertiva y técnica orientada a la resolución de incidencias con usuarios finales mediante escenarios simulados de soporte técnico (Helpdesk) en idioma inglés.</p>
         `,
@@ -165,10 +154,9 @@ const modulosData = [
         herramientas: ["Modelo Canvas", "Gestión de Proyectos", "Contabilidad Cooperativa"],
         estudioDetallado: `
             <h3>1. Emprendimiento y Modelo Canvas</h3>
-            <p>Analizamos cómo transformar ideas técnicas de desarrollo en modelos de negocio sostenibles. Mediante el Business Model Canvas estructuramos propuestas de valor, segmentos de mercado, canales de distribución y estructuras de costos.</p>
-            
+            <p>Analizamos cómo transformar ideas técnicas de desarrollo en modelos de negocio sostenibles. Mediante el Business Model Canvas estructuramos propuestas de valor y segmentos de mercado.</p>
             <h3>2. Asociatividad Cooperativa en Tecnología</h3>
-            <p>Estudiamos el modelo legal y operativo de las cooperativas tecnológicas, donde los profesionales del software se unen democráticamente para asumir riesgos conjuntos, postular a licitaciones y asegurar una distribución equitativa de los beneficios económicos.</p>
+            <p>Estudiamos el modelo legal y operativo de las cooperativas tecnológicas, donde los profesionales del software se unen democráticamente para asumir riesgos conjuntos.</p>
         `,
         preguntas: [
             { t: "¿Qué herramienta estratégica se utiliza para diseñar modelos de negocio en una sola página?", o: ["Modelo Canvas (Business Model Canvas)", "Diagrama de Gantt", "Matriz FODA", "Script de SQL"], r: 0 },
@@ -190,10 +178,9 @@ const modulosData = [
         herramientas: ["Google AI Studio", "GitHub Copilot", "APIs de IA", "Python", "C#"],
         estudioDetallado: `
             <h3>1. Inteligencia Artificial Generativa y Prompts</h3>
-            <p>En este último módulo exploramos la vanguardia del desarrollo moderno integrando modelos de IA generativa mediante Google AI Studio y el asistente de código inteligente GitHub Copilot dentro de Visual Studio Code.</p>
-            
+            <p>En este último módulo exploramos la vanguardia del desarrollo moderno integrando modelos de IA generativa mediante Google AI Studio y GitHub Copilot dentro de Visual Studio Code.</p>
             <h3>2. Proyecto Innovador 'EstudIAnte'</h3>
-            <p>Concretamos el cierre de la especialidad estructurando el proyecto 'EstudIAnte', una solución informática avanzada que aprovecha agentes de IA y procesamiento automatizado para resolver necesidades educativas reales del entorno.</p>
+            <p>Concretamos el cierre de la especialidad estructurando el proyecto 'EstudIAnte', una solución informática avanzada que aprovecha agentes de IA para resolver necesidades educativas.</p>
         `,
         preguntas: [
             { t: "¿Qué plataforma de Google se exploró para experimentar con modelos de IA generativa?", o: ["Google AI Studio", "Google Maps Classic", "Google Notepad", "Google Calculator Online"], r: 0 },
