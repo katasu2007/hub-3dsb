@@ -3,51 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUB 3DS-B · Portal de Repaso Interactivo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+    <title>Repaso 3DS-B · Portal Educativo INDEL</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <span class="marca">HUB 3DS-B · INDEL</span>
+        <div class="brand-container">
+            <span class="brand-logo">HUB 3DS-B</span>
+            <span class="brand-badge">Repaso 2026</span>
+        </div>
         <ul class="nav-links">
-            <li><a href="#modulos">Módulos</a></li>
-            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub Pages</a></li>
+            <li><a href="#modulos">Fichas de Módulo</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
     </header>
 
-    <main class="hero">
-        <p class="inst">Instituto Nacional Cantón Lourdes (INDEL) · 3.º Bachillerato Técnico Vocacional en Desarrollo de Software «B»</p>
-        <h1>Portal de Repaso Integral</h1>
-        <p>Explora el mapa de módulos del año, revisa instrumentos, herramientas y evidencias con una experiencia interactiva espacial.</p>
-    </main>
+    <section class="hero">
+        <div class="hero-inner">
+            <p class="school-tag">Instituto Nacional Cantón Lourdes · INDEL</p>
+            <h1>Portal de Repaso del Año 3.º DS «B»</h1>
+            <p>Repasa los 8 módulos técnicos desarrollados con el Profe Arcides Canales y el Profe Javier Mineros.</p>
+        </div>
+    </section>
 
-    <div class="main-container" id="modulos">
-        <div class="controls-bar">
-            <input type="text" id="buscador" class="search-input" placeholder="Buscar módulo, herramienta o programa...">
-            <span id="contadorModulos" class="stats-counter">Mostrando todos los módulos</span>
+    <main class="main-container" id="modulos">
+        <div class="controls-wrapper">
+            <div class="search-box-row">
+                <input type="text" id="buscador" class="search-input" placeholder="🔍 Buscar módulo, lenguaje, software o contenido...">
+            </div>
+            <div class="search-box-row" style="justify-content: space-between;">
+                <div class="filter-buttons">
+                    <button class="btn-filter active" data-filter="todos">Todos (8)</button>
+                    <button class="btn-filter" data-filter="Arcides">Profe Arcides (4)</button>
+                    <button class="btn-filter" data-filter="Javier">Profe Javier (4)</button>
+                </div>
+                <span id="contadorModulos" class="stats-counter">Mostrando 8 de 8 fichas</span>
+            </div>
         </div>
 
         <div id="gridModulos" class="grid-modulos">
-            <!-- Se poblará dinámicamente con JavaScript -->
+            <!-- Se carga dinámicamente -->
         </div>
-    </div>
+    </main>
 
-    <!-- Modal para la ficha detallada -->
+    <!-- Modal Ficha de Estudio -->
     <div id="modalFicha" class="modal-overlay">
         <div class="modal-content">
             <button id="cerrarModal" class="modal-close">&times;</button>
             <div id="contenidoModal">
-                <!-- Contenido dinámico de la ficha -->
+                <!-- Contenido interactivo -->
             </div>
         </div>
     </div>
 
     <footer>
-        <p><b>Guía y Portal 3DS-B</b> · Instituto Nacional Cantón Lourdes (INDEL)</p>
-        <p>Versión v1.0 · Creado con estándares web modernos y diseño espacial.</p>
+        <p><b>HUB 3DS-B</b> · Bachillerato Técnico Vocacional en Desarrollo de Software «B»</p>
+        <p>Instituto Nacional Cantón Lourdes (INDEL) · 2026</p>
     </footer>
 
     <script src="js/data.js"></script>
