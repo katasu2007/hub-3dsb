@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUB 3DS-B · Repaso Interactivo INDEL</title>
+    <title>HUB 3DS-B · Portal Educativo INDEL</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -12,13 +12,30 @@
         <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">3.º Bachillerato Técnico en Desarrollo de Software «B»</span>
     </header>
 
-    <section class="hero-intro">
-        <h1>Plataforma Interactiva de Repaso Técnico</h1>
-        <p>Bienvenido al portal educativo institucional. Aquí podrás estudiar de forma guiada los módulos de la especialidad, evaluarte mediante cuestionarios aleatorios dinámicos y asegurar tu dominio técnico antes de avanzar.</p>
+    <!-- PANTALLA DE INTRODUCCIÓN A LA CARRERA (Se muestra al ingresar) -->
+    <section id="seccionIntro" class="intro-overlay-screen">
+        <div class="intro-card-box">
+            <span class="badge-docente" style="background: var(--pastel-purple-light); color: var(--pastel-purple); margin-bottom: 1rem; display:inline-block;">Especialidad Técnica · INDEL</span>
+            <h1>Bienvenido al Portal de Repaso 3.º DS «B»</h1>
+            <p class="intro-desc">
+                El Bachillerato Técnico Vocacional en Desarrollo de Software forma profesionales capaces de diseñar, programar, implementar y dar mantenimiento a sistemas informáticos, aplicaciones multiplataforma, bases de datos masivas y soluciones integrales con tecnologías modernas e inteligencia artificial.
+            </p>
+            <p class="intro-desc" style="margin-top: 0.8rem;">
+                Esta plataforma interactiva te guiará a través de una ruta de estudio obligatoria de 8 módulos impartidos por el <b>Profesor Arcides Canales</b> y el <b>Profesor Javier Mineros</b>. Deberás estudiar el contenido técnico de cada módulo y aprobar su respectivo cuestionario con nota perfecta (10/10) para desbloquear el siguiente nivel.
+            </p>
+            <button class="btn-accion" id="btnComenzarRuta" style="margin-top: 2rem; width: 100%; padding: 1rem; font-size: 1rem;">
+                Comenzar Ruta de Repaso →
+            </button>
+        </div>
     </section>
 
-    <main class="main-container">
-        <!-- Selector de modos de estudio (Todos los módulos o filtrados por profesor) -->
+    <!-- CONTENEDOR PRINCIPAL DE MÓDULOS Y ESTUDIO -->
+    <main class="main-container" id="mainAppContainer" style="display: none;">
+        <div class="hero-intro" style="padding: 2rem 1rem; text-align: left; margin-bottom: 1.5rem; background: #ffffff; border-radius: 20px; border: 2px solid var(--border-subtle);">
+            <h1>Ruta de Módulos Técnicos</h1>
+            <p style="margin: 0; color: var(--text-muted);">Estudia cada módulo en profundidad, lee los conceptos clave y evalúate de forma individual.</p>
+        </div>
+
         <div class="mode-selector">
             <button class="btn-mode active" data-modo="todos">Ruta Completa (8 Módulos)</button>
             <button class="btn-mode" data-modo="Arcides Canales">Módulos Profe Arcides (4)</button>

@@ -3,15 +3,16 @@ const modulosData = [
         id: 1, codigo: "BTVDS 3.1", docente: "Profesor Javier Mineros",
         nombre: "Desarrollo de aplicaciones de software para la solución de problemas",
         resumenCorto: "Arquitecturas robustas, conexión PDO segura y subtrazabilidad automatizada de inventarios.",
-        herramientas: ["C#", ".NET", "PHP", "SQL", "MySQL", "Visual Studio Community"],
+        herramientas: ["C#", ".NET", "PHP", "SQL", "MySQL", "Visual Studio Community", "XAMPP"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>Durante este módulo nos enfocamos en diseñar sistemas orientados a resolver problemáticas reales mediante el uso de bases de datos relacionales y lenguajes de backend sólidos.</p>
-            <ul>
-                <li><b>Arquitectura de Software:</b> Estructuración de capas separando la interfaz, la lógica del negocio y el acceso a datos.</li>
-                <li><b>Seguridad en Conexiones:</b> Implementación de PHP Data Objects (PDO) para evitar inyecciones SQL y garantizar transacciones seguras.</li>
-                <li><b>Automatización de Inventarios:</b> Creación de sistemas de punto de venta locales con actualización de stock en tiempo real.</li>
-            </ul>
+            <h3>1. Introducción a las Arquitecturas de Software</h3>
+            <p>En este módulo analizamos cómo estructurar programas informáticos complejos dividiéndolos en capas lógicas (Presentación, Negocio y Datos). Esto permite que el mantenimiento del software sea limpio, escalable y fácil de depurar ante cualquier fallo imprevisto.</p>
+            
+            <h3>2. Conectividad Segura con PHP Data Objects (PDO)</h3>
+            <p>Aprendimos a vincular aplicaciones web locales operadas mediante servidores Apache (XAMPP) utilizando PDO en PHP. A diferencia de las conexiones tradicionales antiguas, PDO nos otorga capas de abstracción para prevenir inyecciones SQL mediante consultas preparadas, protegiendo la integridad de la base de datos.</p>
+            
+            <h3>3. Sistemas de Inventario y Lógica de Negocio</h3>
+            <p>Desarrollamos componentes de escritorio utilizando C# y Windows Forms, implementando puntos de venta que calculan subtotales automáticamente, restan existencias de stock en tiempo real en bases de datos relacionales (MySQL/SQL Server) y generan registros de transacciones exitosas.</p>
         `,
         preguntas: [
             { t: "¿Qué significa PDO en el contexto de PHP?", o: ["PHP Data Objects", "Programming Database Operation", "Public Data Output", "Primary Database Organization"], r: 0 },
@@ -30,14 +31,16 @@ const modulosData = [
         id: 2, codigo: "BTVDS 3.2", docente: "Profesor Arcides Canales",
         nombre: "Diseño e implementación de acuerdos de nivel de servicio (SLA)",
         resumenCorto: "Documentación SLA para clientes y refactorización del software 'La Esquina del Sabor'.",
-        herramientas: ["C#", "Plantillas SLA", "Control de Calidad", "Visual Studio"],
+        herramientas: ["C#", "Plantillas SLA", "Control de Calidad", "Visual Studio", "Word"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>Este módulo combinó la ingeniería de requerimientos técnicos con la administración profesional de proyectos de desarrollo.</p>
-            <ul>
-                <li><b>Acuerdos SLA:</b> Aprendimos a redactar documentos contractuales y técnicos donde se establecen los estándares de calidad, tiempos de respuesta y entregables que el cliente exige al desarrollador.</li>
-                <li><b>Refactorización Práctica:</b> Mejoramos el sistema del restaurante 'La Esquina del Sabor' aplicando rigurosamente los requerimientos solicitados en nuestra plantilla SLA.</li>
-            </ul>
+            <h3>1. Ingeniería de Requerimientos y Acuerdos SLA</h3>
+            <p>Un SLA (Service Level Agreement) es el contrato técnico formal que define con precisión quirúrgica qué entregará el desarrollador, los plazos de entrega, los estándares de rendimiento y las condiciones de soporte que el cliente espera recibir tras contratar los servicios informáticos.</p>
+            
+            <h3>2. Gestión de Expectativas del Cliente</h3>
+            <p>Aprendimos a redactar especificaciones sin ambigüedades para evitar cambios arbitrarios de alcance a mitad del desarrollo, asegurando que las horas invertidas por el programador tengan un marco legal y operativo transparente.</p>
+            
+            <h3>3. Refactorización del Proyecto 'La Esquina del Sabor'</h3>
+            <p>Aplicamos de forma práctica la plantilla SLA diseñada previamente para auditar y refactorizar el software del restaurante 'La Esquina del Sabor', corrigiendo fallas de arquitectura y añadiendo los requerimientos exactos solicitados por el docente.</p>
         `,
         preguntas: [
             { t: "¿Qué significan las siglas SLA?", o: ["Acuerdo de Nivel de Servicio (Service Level Agreement)", "Sistema Lógico Automatizado", "Software Libre Avanzado", "Servidor Local de Aplicaciones"], r: 0 },
@@ -56,14 +59,16 @@ const modulosData = [
         id: 3, codigo: "BTVDS 3.3", docente: "Profesor Arcides Canales",
         nombre: "Administración y análisis visual de datos relacionales",
         resumenCorto: "Consultas SQL avanzadas en SQL Server y generación de Dashboards en Power BI y Excel.",
-        herramientas: ["SQL Server", "Power BI", "Excel", "T-SQL"],
+        herramientas: ["SQL Server", "Power BI", "Excel", "T-SQL", "SSMS"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>En este módulo dominamos la manipulación de grandes volúmenes de información y la representación gráfica gerencial.</p>
-            <ul>
-                <li><b>Bases de Datos Masivas:</b> Consultas complejas, uniones (JOINs), procedimientos almacenados y mantenimiento en SQL Server.</li>
-                <li><b>Business Intelligence:</b> Creación de Dashboards interactivos utilizando Power BI y Excel para la visualización analítica de datos.</li>
-            </ul>
+            <h3>1. Bases de Datos Masivas en SQL Server</h3>
+            <p>Estudiamos la administración avanzada de motores relacionales corporativos utilizando Microsoft SQL Server Management Studio (SSMS). Aprendimos a formular consultas complejas con múltiples uniones de tablas (JOINs), funciones de agregación y procedimientos almacenados eficientes.</p>
+            
+            <h3>2. Inteligencia de Negocios (Business Intelligence)</h3>
+            <p>Conectamos grandes volúmenes de datos transaccionales hacia plataformas de análisis visual como Microsoft Power BI. Esto nos permitió transformar filas de datos numéricos crudos en tableros interactivos (Dashboards) orientados a la gerencia.</p>
+            
+            <h3>3. Toma de Decisiones Basada en Datos</h3>
+            <p>La visualización analítica facilita la detección rápida de tendencias de ventas, rendimiento de productos y control operativo dentro de cualquier ecosistema empresarial moderno.</p>
         `,
         preguntas: [
             { t: "¿Qué lenguaje se utiliza para gestionar bases de datos en Microsoft SQL Server?", o: ["T-SQL", "JavaScript", "HTML", "CSS"], r: 0 },
@@ -82,14 +87,13 @@ const modulosData = [
         id: 4, codigo: "BTVDS 3.4", docente: "Profesor Arcides Canales",
         nombre: "Desarrollo multiplataforma y gestión ERP empresarial",
         resumenCorto: "Aplicaciones con Python, PHP, Avalonia, WPF y operación de flujos empresariales con Odoo ERP.",
-        herramientas: ["Python", "PHP", "Avalonia UI", "WPF", "Odoo ERP"],
+        herramientas: ["Python", "PHP", "Avalonia UI", "WPF", "Odoo ERP", "XAMPP"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>Exploramos la diversificación tecnológica para crear aplicaciones de escritorio y el funcionamiento de los sistemas de planificación de recursos empresariales (ERP).</p>
-            <ul>
-                <li><b>Multiplataforma:</b> Desarrollo utilizando múltiples frameworks y lenguajes adaptados a diferentes entornos (Python, PHP, Avalonia, WPF).</li>
-                <li><b>Sistemas ERP:</b> Integración y comprensión de módulos empresariales con Odoo para la gestión de inventarios, ventas y contabilidad.</li>
-            </ul>
+            <h3>1. Diversificación Tecnológica Multiplataforma</h3>
+            <p>Comprendimos que un desarrollador de software integral debe adaptarse a distintos entornos. Estudiamos la construcción de aplicaciones ejecutables en múltiples sistemas operativos utilizando frameworks modernos como Avalonia UI, WPF, junto con la agilidad de Python y PHP.</p>
+            
+            <h3>2. Sistemas de Planificación de Recursos (ERP)</h3>
+            <p>Analizamos la arquitectura y operación de un Enterprise Resource Planning (ERP) utilizando Odoo. Un ERP integra en una sola base de datos centralizada todos los departamentos críticos de una organización: inventarios, contabilidad, compras, ventas y recursos humanos.</p>
         `,
         preguntas: [
             { t: "¿Qué significa ERP en el ámbito de los sistemas de información?", o: ["Enterprise Resource Planning (Planificación de Recursos Empresariales)", "Easy Rapid Programming", "Electronic Relational Process", "External Routine Protocol"], r: 0 },
@@ -110,12 +114,11 @@ const modulosData = [
         resumenCorto: "Interfaces responsivas en XAML y despliegue multiplataforma móvil con .NET MAUI.",
         herramientas: [".NET MAUI", "C#", "XAML", "Android SDK", "Visual Studio"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>Diseño y programación enfocada en dispositivos móviles aprovechando el ecosistema de .NET MAUI y XAML.</p>
-            <ul>
-                <li><b>Interfaces XAML:</b> Creación de componentes visuales adaptables a diferentes tamaños de pantalla y densidades de píxeles.</li>
-                <li><b>Emulación y Despliegue:</b> Pruebas ejecutando emuladores de Android y dispositivos físicos para verificar rendimiento y navegación.</li>
-            </ul>
+            <h3>1. Ecosistema de .NET MAUI para Móviles</h3>
+            <p>Este módulo se centró en el diseño y despliegue de aplicaciones móviles nativas y multiplataforma utilizando el SDK moderno de Microsoft .NET MAUI. Aprendimos a estructurar proyectos limpios capaces de ejecutarse tanto en móviles Android como en equipos de escritorio.</p>
+            
+            <h3>2. Diseño de Interfaces Adaptables con XAML</h3>
+            <p>Utilizamos XAML (Extensible Application Markup Language) para maquetar interfaces visuales fluidas, aplicando controles contenedores como Grid, StackLayout y bindings de datos enlazados directamente a la lógica de negocio escrita en C#.</p>
         `,
         preguntas: [
             { t: "¿Qué framework multiplataforma oficial de Microsoft se utilizó para apps móviles?", o: [".NET MAUI", "DirectX", "Windows Forms clásico", "ASP.NET WebForms"], r: 0 },
@@ -123,7 +126,7 @@ const modulosData = [
             { t: "¿Qué IDE principal integra las herramientas de desarrollo para .NET MAUI?", o: ["Visual Studio Community", "NetBeans", "Xcode", "Android Studio exclusivo"], r: 0 },
             { t: "¿Qué lenguaje de programación maneja el código detrás (Code-Behind) en MAUI?", o: ["C#", "Java", "Objective-C", "PHP"], r: 0 },
             { t: "¿Qué emulador se requirió habitualmente para probar las aplicaciones móviles en PC?", o: ["Android Emulator", "Nintendo Switch Emulator", "DOSBox", "VirtualBox Linux"], r: 0 },
-            { t: "¿Qué significa que una aplicación sea 'multiplataforma móvil'?", o: ["Que puede compilarse y ejecutarse en Android e iOS (y escritorio) desde un mismo proyecto", "Que solo funciona sin internet", "Que no requiere código", "Que solo corre en Windows 95"], r: 0 },
+            { t: "¿Qué significa que una aplicación seja 'multiplataforma móvil'?", o: ["Que puede compilarse y ejecutarse en Android e iOS (y escritorio) desde un mismo proyecto", "Que solo funciona sin internet", "Que no requiere código", "Que solo corre en Windows 95"], r: 0 },
             { t: "¿Cómo se gestionan los elementos visuales organizados en filas y columnas en XAML?", o: ["Mediante layouts como Grid, StackLayout y FlexLayout", "Usando comandos de consola de SQL", "Con archivos de audio", "Con hojas de Excel"], r: 0 },
             { t: "¿Qué SDK se instala en Visual Studio para compilar aplicaciones móviles Android?", o: ["Android SDK y emuladores de Google", "SDK de impresoras láser", "Driver de tarjeta gráfica", "Paquete de Office 365"], r: 0 },
             { t: "El diseño responsivo en móviles busca:", o: ["Adaptar la interfaz correctamente a cualquier tamaño de pantalla o rotación", "Ocultar los botones principales", "Hacer la letra invisible", "Gastar más batería"], r: 0 },
@@ -134,14 +137,13 @@ const modulosData = [
         id: 6, codigo: "BTVDS 3.6", docente: "Profesor Javier Mineros",
         nombre: "Conversación de inglés sobre mantenimiento de sistemas informáticos",
         resumenCorto: "Vocabulario técnico en inglés y simulación de soporte técnico para hardware y software.",
-        herramientas: ["Vocabulario IT", "Manuales en Inglés", "Soporte Técnico"],
+        herramientas: ["Vocabulario IT", "Manuales en Inglés", "Soporte Técnico", "Helpdesk"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>Fortalecimiento de la comunicación técnica bilingüe aplicada al diagnóstico, soporte y mantenimiento informático.</p>
-            <ul>
-                <li><b>Terminología IT:</b> Comprensión de manuales de hardware, códigos de error y documentación técnica en inglés.</li>
-                <li><b>Simulación de Soporte:</b> Interacción oral y escrita resolviendo incidencias simuladas con usuarios en idioma inglés.</li>
-            </ul>
+            <h3>1. Importancia del Inglés Técnico en la Informática</h3>
+            <p>La industria del desarrollo de software opera globalmente en inglés. En este módulo estudiamos manuales técnicos de fabricantes de hardware, interpretaciones de códigos de error (Error Logs) y documentación de APIs internacionales.</p>
+            
+            <h3>2. Simulaciones de Soporte y Diagnóstico (Troubleshooting)</h3>
+            <p>Practicamos la comunicación asertiva y técnica orientada a la resolución de incidencias con usuarios finales mediante escenarios simulados de soporte técnico (Helpdesk) en idioma inglés.</p>
         `,
         preguntas: [
             { t: "¿Cuál es el enfoque principal de este módulo técnico?", o: ["Dominar el vocabulario y comunicación técnica en inglés para soporte IT", "Aprender gramática literaria en español", "Diseñar videojuegos en 3D", "Programar en ensamblador"], r: 0 },
@@ -162,12 +164,11 @@ const modulosData = [
         resumenCorto: "Modelo Canvas, viabilidad técnica y creación de modelos cooperativos tecnológicos.",
         herramientas: ["Modelo Canvas", "Gestión de Proyectos", "Contabilidad Cooperativa"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>Planificación de emprendimientos tecnológicos bajo esquemas asociativos y cooperativos sostenibles.</p>
-            <ul>
-                <li><b>Modelo Canvas:</b> Diseño estructural de propuestas de valor, segmentos de clientes y flujos de ingresos.</li>
-                <li><b>Cooperativismo:</b> Estructuración legal y operativa de microempresas formadas por desarrolladores de software.</li>
-            </ul>
+            <h3>1. Emprendimiento y Modelo Canvas</h3>
+            <p>Analizamos cómo transformar ideas técnicas de desarrollo en modelos de negocio sostenibles. Mediante el Business Model Canvas estructuramos propuestas de valor, segmentos de mercado, canales de distribución y estructuras de costos.</p>
+            
+            <h3>2. Asociatividad Cooperativa en Tecnología</h3>
+            <p>Estudiamos el modelo legal y operativo de las cooperativas tecnológicas, donde los profesionales del software se unen democráticamente para asumir riesgos conjuntos, postular a licitaciones y asegurar una distribución equitativa de los beneficios económicos.</p>
         `,
         preguntas: [
             { t: "¿Qué herramienta estratégica se utiliza para diseñar modelos de negocio en una sola página?", o: ["Modelo Canvas (Business Model Canvas)", "Diagrama de Gantt", "Matriz FODA", "Script de SQL"], r: 0 },
@@ -186,14 +187,13 @@ const modulosData = [
         id: 8, codigo: "BTVDS 3.8", docente: "Profesor Arcides Canales",
         nombre: "Integración de inteligencia artificial y soluciones innovadoras",
         resumenCorto: "Uso de Google AI Studio, GitHub Copilot y desarrollo del proyecto innovador 'EstudIAnte'.",
-        herramientas: ["Google AI Studio", "GitHub Copilot", "APIs de IA", "Python / C#"],
+        herramientas: ["Google AI Studio", "GitHub Copilot", "APIs de IA", "Python", "C#"],
         estudioDetallado: `
-            <h3>Repaso Integral del Módulo</h3>
-            <p>El cierre de especialidad integrando herramientas de Inteligencia Artificial generativa y agentes inteligentes en el desarrollo.</p>
-            <ul>
-                <li><b>Prompt Engineering:</b> Integración avanzada de modelos de IA con Google AI Studio y el asistente de Visual Studio Code (Copilot).</li>
-                <li><b>Proyecto 'EstudIAnte':</b> Creación de una solución tecnológica innovadora aplicando todos los saberes adquiridos a lo largo del año.</li>
-            </ul>
+            <h3>1. Inteligencia Artificial Generativa y Prompts</h3>
+            <p>En este último módulo exploramos la vanguardia del desarrollo moderno integrando modelos de IA generativa mediante Google AI Studio y el asistente de código inteligente GitHub Copilot dentro de Visual Studio Code.</p>
+            
+            <h3>2. Proyecto Innovador 'EstudIAnte'</h3>
+            <p>Concretamos el cierre de la especialidad estructurando el proyecto 'EstudIAnte', una solución informática avanzada que aprovecha agentes de IA y procesamiento automatizado para resolver necesidades educativas reales del entorno.</p>
         `,
         preguntas: [
             { t: "¿Qué plataforma de Google se exploró para experimentar con modelos de IA generativa?", o: ["Google AI Studio", "Google Maps Classic", "Google Notepad", "Google Calculator Online"], r: 0 },
