@@ -3,62 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repaso 3DS-B · Portal Educativo INDEL</title>
+    <title>HUB 3DS-B · Repaso Interactivo INDEL</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <div class="brand-container">
-            <span class="brand-logo">HUB 3DS-B</span>
-            <span class="brand-badge">Repaso 2026</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#modulos">Fichas de Módulo</a></li>
-            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
+        <span class="brand-logo">HUB 3DS-B · INDEL</span>
+        <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">3.º Bachillerato Técnico en Desarrollo de Software «B»</span>
     </header>
 
-    <section class="hero">
-        <div class="hero-inner">
-            <p class="school-tag">Instituto Nacional Cantón Lourdes · INDEL</p>
-            <h1>Portal de Repaso del Año 3.º DS «B»</h1>
-            <p>Repasa los 8 módulos técnicos desarrollados con el Profe Arcides Canales y el Profe Javier Mineros.</p>
-        </div>
+    <section class="hero-intro">
+        <h1>Plataforma Interactiva de Repaso Técnico</h1>
+        <p>Bienvenido al portal educativo institucional. Aquí podrás estudiar de forma guiada los módulos de la especialidad, evaluarte mediante cuestionarios aleatorios dinámicos y asegurar tu dominio técnico antes de avanzar.</p>
     </section>
 
-    <main class="main-container" id="modulos">
-        <div class="controls-wrapper">
-            <div class="search-box-row">
-                <input type="text" id="buscador" class="search-input" placeholder="🔍 Buscar módulo, lenguaje, software o contenido...">
-            </div>
-            <div class="search-box-row" style="justify-content: space-between;">
-                <div class="filter-buttons">
-                    <button class="btn-filter active" data-filter="todos">Todos (8)</button>
-                    <button class="btn-filter" data-filter="Arcides">Profe Arcides (4)</button>
-                    <button class="btn-filter" data-filter="Javier">Profe Javier (4)</button>
-                </div>
-                <span id="contadorModulos" class="stats-counter">Mostrando 8 de 8 fichas</span>
-            </div>
+    <main class="main-container">
+        <!-- Selector de modos de estudio (Todos los módulos o filtrados por profesor) -->
+        <div class="mode-selector">
+            <button class="btn-mode active" data-modo="todos">Ruta Completa (8 Módulos)</button>
+            <button class="btn-mode" data-modo="Arcides Canales">Módulos Profe Arcides (4)</button>
+            <button class="btn-mode" data-modo="Javier Mineros">Módulos Profe Javier (4)</button>
         </div>
 
-        <div id="gridModulos" class="grid-modulos">
-            <!-- Se carga dinámicamente -->
+        <div id="appContainer">
+            <div id="gridModulos"></div>
         </div>
     </main>
 
-    <!-- Modal Ficha de Estudio -->
-    <div id="modalFicha" class="modal-overlay">
-        <div class="modal-content">
-            <button id="cerrarModal" class="modal-close">&times;</button>
-            <div id="contenidoModal">
-                <!-- Contenido interactivo -->
-            </div>
-        </div>
-    </div>
-
     <footer>
-        <p><b>HUB 3DS-B</b> · Bachillerato Técnico Vocacional en Desarrollo de Software «B»</p>
-        <p>Instituto Nacional Cantón Lourdes (INDEL) · 2026</p>
+        <p><b>HUB 3DS-B</b> · Instituto Nacional Cantón Lourdes (INDEL) · 2026</p>
     </footer>
 
     <script src="js/data.js"></script>
