@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let modoActual = "todos"; 
 
+    // Evento seguro para el botón de introducción
     if (btnComenzarRuta) {
         btnComenzarRuta.addEventListener("click", () => {
             if (seccionIntro) seccionIntro.style.display = "none";
@@ -40,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.renderizarPaginaCompleta = function() {
         const progreso = obtenerProgreso();
         const totalCompletados = Object.values(progreso).filter(p => p.nota === 10).length;
-        const porcentaje = Math.round((totalCompletados / 8) * 100);
+        const totalModulos = modulosData.length;
+        const porcentaje = Math.round((totalCompletados / totalModulos) * 100);
 
         if (!mainAppContainer) return;
 
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="dashboard-stats">
                     <div class="stat-card-mini">
                         <span>Aprobados</span>
-                        <b>${totalCompletados} / 8</b>
+                        <b>${totalCompletados} / ${totalModulos}</b>
                     </div>
                     <div class="stat-card-mini">
                         <span>Progreso</span>
@@ -91,14 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const progreso = obtenerProgreso();
         let filtrados = modulosData;
-        if (modoActual !== "todos") {
-            filtrados = modulosData.filter(m => m.docente.includes(modoActual));
+
+        // Filtro exacto según la pestaña activa
+        if (modoActual === "Arcides Canales") {
+            filtrados = modulosData.filter(m => m.docente.includes("Arcides Canales"));
+        } else if (modoActual === "Javier Mineros") {
+            filtrados = modulosData.filter(m => m.docente.includes("Javier Mineros"));
         }
 
         let html = `<div class="grid-modulos">`;
 
         filtrados.forEach((mod) => {
-            const estado = progreso[mod.id];
+            const estado = progreso[mod.id] || { estudiado: false, nota: null };
             const desbloqueado = puedeAcceder(mod.id, progreso);
             const completado = estado.nota === 10;
             const tieneNota = estado.nota !== null;
@@ -132,8 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
             let infoCabeceraHtml = "";
             let accionesHtml = "";
 
-            // Si estamos en la pestaña general "Módulos", mostramos badges y botones de avance.
-            // Si estamos en el apartado de los profesores, solo mostramos el listado informativo limpio sin botones ni bloqueos.
             if (modoActual === "todos") {
                 infoCabeceraHtml = `
                     <span style="font-weight: 800; color: var(--pastel-purple);">${mod.codigo}</span>
@@ -150,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 infoCabeceraHtml = `
                     <span style="font-weight: 800; color: var(--pastel-purple);">${mod.codigo}</span>
                 `;
-                accionesHtml = ""; // Sin botones ni estados en las pestañas de profesores
+                accionesHtml = ""; // Sin botones ni estados en las pestañas exclusivas de profesores
             }
 
             html += `
@@ -242,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="btn-mode" onclick="renderizarPaginaCompleta()" style="margin-bottom: 1.5rem;">Cancelar y volver</button>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                     <span style="font-weight: 800; color: var(--pastel-purple);">Cuestionario: ${moduloActivo.codigo}</span>
-                    <span style="color: var(--text-muted);">Pregunta ${preguntaActual + 1} de 10</span>
+                    <span style="color: var(--text-muted);">Pregunta ${preguntaActual + 1} de ${preguntasMezcladas.length}</span>
                 </div>
                 <div class="quiz-question-box">
                     <h3 style="font-size: 1.15rem; color: var(--text-dark);">${p.t}</h3>
@@ -273,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
         respuestasUsuario.push(idxSeleccionada);
         preguntaActual++;
 
-        if (preguntaActual < 10) {
+        if (preguntaActual < preguntasMezcladas.length) {
             mostrarPregunta();
         } else {
             calcularResultadoQuiz();
@@ -287,15 +291,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const notaFinal = correctas;
+        const totalPreguntas = preguntasMezcladas.length;
         const progreso = obtenerProgreso();
         progreso[moduloActivo.id].nota = notaFinal;
         guardarProgreso(progreso);
 
         let mensajeHtml = "";
-        if (notaFinal === 10) {
+        if (notaFinal === totalPreguntas) {
             mensajeHtml = `
                 <div style="background: var(--pastel-mint-light); border: 2px solid var(--pastel-mint); padding: 2rem; border-radius: 20px; text-align: center; color: #065f46;">
-                    <h2>¡Excelente Trabajo! Nota: 10 / 10 🌟</h2>
+                    <h2>¡Excelente Trabajo! Nota: ${notaFinal} / ${totalPreguntas} 🌟</h2>
                     <p style="margin: 1rem 0;">Has aprobado y dominado este módulo correctamente. Se ha desbloqueado el siguiente contenido en tu ruta.</p>
                     <button class="btn-accion" onclick="renderizarPaginaCompleta()" style="background: var(--pastel-mint); color: #ffffff;">Continuar ruta de estudio</button>
                 </div>
@@ -303,8 +308,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             mensajeHtml = `
                 <div style="background: var(--pastel-peach-light); border: 2px solid var(--pastel-peach); padding: 2rem; border-radius: 20px; text-align: center; color: #9a3412;">
-                    <h2>Calificación obtenida: ${notaFinal} / 10 ⚠️</h2>
-                    <p style="margin: 1rem 0;">Necesitas una nota perfecta de 10 para completar el módulo y avanzar al siguiente. Las preguntas se han barajado de nuevo para un nuevo intento.</p>
+                    <h2>Calificación obtenida: ${notaFinal} / ${totalPreguntas} ⚠️</h2>
+                    <p style="margin: 1rem 0;">Necesitas una nota perfecta para completar el módulo y avanzar al siguiente. Las preguntas se han barajado de nuevo para un nuevo intento.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
                         <button class="btn-accion" onclick="iniciarEstudio(${moduloActivo.id})" style="background: var(--pastel-peach);">Repasar</button>
                         <button class="btn-accion" onclick="iniciarQuiz(${moduloActivo.id})">Reintentar Cuestionario</button>

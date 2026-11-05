@@ -1,5 +1,5 @@
 const modulosData = [
-    // --- MÓDULOS DEL PROFESOR ARCIDES CANALES (IDs 1 al 4) ---
+    // --- MÓDULOS DEL PROFESOR ARCIDES CANALES (4 Módulos) ---
     {
         id: 1, codigo: "BTVDS 3.1", docente: "Profesor Arcides Canales",
         nombre: "BTVDS 3.1 Desarrollo de aplicaciones de software para la solución de problemas",
@@ -7,7 +7,7 @@ const modulosData = [
         herramientas: ["C#", "POO", "ASP Razor", "Entity Framework Code First", "SQL Server", "Visual Studio Community"],
         estudioDetallado: `
             <h3>1. Introducción a la POO y Polimorfismo</h3>
-            <p>Se abordan los conceptos fundamentales mediante la Práctica 1 (Introducción a la POO) y la Práctica 2 (Herencia y Polimorfismo) para estruturar clases lógicas en C#.</p>
+            <p>Se abordan los conceptos fundamentales mediante la Práctica 1 (Introducción a la POO) y la Práctica 2 (Herencia y Polimorfismo) para estructurar clases lógicas en C#.</p>
             <h3>2. Acceso a Datos y Conexión</h3>
             <p>Se trabaja la etapa de informarse, la Práctica 3 ("A" Acceso a datos) y la Práctica 04 orientada a la creación y conexión de bases de datos relacionales.</p>
             <h3>3. Desarrollo Moderno con ASP Razor</h3>
@@ -32,7 +32,7 @@ const modulosData = [
         resumenCorto: "Prácticas de desarrollo móvil progresivo con .NET MAUI (Práctica 06, 7, 8, 9), autoevaluaciones y recuperación.",
         herramientas: [".NET MAUI", "C#", "XAML", "Visual Studio", "Emulador Android"],
         estudioDetallado: `
-            <h3>1. Fundamentos de .NET MAUI (.NET Multi-platform App UI)</h3>
+            <h3>1. Fundamentos de .NET MAUI</h3>
             <p>Se inicia con la Práctica 06 estableciendo los fundamentos de la maquetación y la lógica multiplataforma para dispositivos inteligentes utilizando C# y XAML.</p>
             <h3>2. Estructuración de Interfaces y Componentes Avanzados</h3>
             <p>A través de la Práctica 7, Práctica 8 y Práctica 9 Net Maui, se construyen interfaces de usuario responsivas, navegación entre páginas y enlace de datos móviles.</p>
@@ -75,7 +75,7 @@ const modulosData = [
             { t: "¿Qué artefacto es común en la metodología Scrum?", o: ["Sprint Backlog y Tablero de tareas", "Disco duro de 1TB", "Cable HDMI", "Fuente de poder"], r: 0 },
             { t: "¿Qué herramienta o entorno se asocia al desarrollo de bases de datos relacionales?", o: ["SQL Server / MySQL", "Microsoft Paint", "Bloc de notas sin formato", "Reproductor de video"], r: 0 },
             { t: "¿Qué habilidad fomenta el trabajo bajo marcos ágiles como Scrum?", o: ["Adaptabilidad al cambio, comunicación constante y entregas incrementales", "Trabajo aislado sin hablar", "Evitar documentar", "Hacer todo en un día sin planificar"], r: 0 },
-            { t: "¿Cuál es el propósito del módulo 3?", o: ["Preparar al técnico para entornos de trabajo modernos con metodologías y datos inteligentes", "Vender equipo usado", "Impartir literatura", "Diseñar webs estáticas"], r: 0 }
+            { t: "¿Cuál es o fue el propósito del módulo 3?", o: ["Preparar al técnico para entornos de trabajo modernos con metodologías y datos inteligentes", "Vender equipo usado", "Impartir literatura", "Diseñar webs estáticas"], r: 0 }
         ]
     },
     {
@@ -105,7 +105,7 @@ const modulosData = [
         ]
     },
 
-    // --- MÓDULOS DEL PROFESOR JAVIER MINEROS (IDs 5 al 9) ---
+    // --- MÓDULOS DEL PROFESOR JAVIER MINEROS (5 Módulos) ---
     {
         id: 5, codigo: "BTVDS 3.1", docente: "Profesor Javier Mineros",
         nombre: "Módulo 3.0 “Orientación de estudiantes al proceso educativo del tercer año”",
@@ -172,7 +172,7 @@ const modulosData = [
             { t: "¿Cuál es el objetivo de un Dashboard conectado a una base de datos?", o: ["Visualizar métricas e indicadores clave de rendimiento en tiempo real", "Impedir el acceso a información", "Ocupar disco duro", "Reemplazar SQL Server"], r: 0 },
             { t: "¿Qué función cumple la actividad remedial o de recuperación?", o: ["Brindar la oportunidad de alcanzar competencias pendientes en el manejo de datos", "Eliminar registros", "Cambiar de profesor", "Apagar servidores"], r: 0 },
             { t: "¿Qué lenguaje o entorno gestiona la base de datos subyacente?", o: ["SQL / T-SQL", "HTML5", "CSS3", "Markdown"], r: 0 },
-            { t: "¿Por qué es crucial administrar correctamente las bases de datos corporativas?", o: ["Para garantizar la integridad, seguridad y disponibilidad de la información", "Para hacer consultas lentas", "Para borrar datos", "Para no usar servidores"], r: 0 },
+            { t: "¿Por qué es crucial administrar correctamente las bases de datos corporativas?", o: ["Para garantizar la integridad, seguridad y disponibilidad de la información", "Para hacer consultas lentas", "Para borrar datos", "Para não usar servidores"], r: 0 },
             { t: "¿Qué tipo de gráficos predominan en los informes de Power BI?", o: ["Gráficos de barras, líneas, dispersión e indicadores KPI", "Texto plano", "Imágenes en blanco y negro", "Partituras musicales"], r: 0 },
             { t: "¿Qué actividad combina la ejecución final con documentación y dashboards?", o: ["EJECUTAR FINAL MÁS DASHBOARD MÁS DOCUMENTACIÓN", "Práctica de mecanografía", "Instalación de drivers", "Creación de equipos"], r: 0 },
             { t: "La administración avanzada de datos permite a las empresas:", o: ["Tomar decisiones estratégicas fundamentadas en análisis precisos", "Gastar en papel", "Ocultar información", "Evitar computadoras"], r: 0 }
@@ -187,7 +187,7 @@ const modulosData = [
             <h3>1. Desarrollo de Apps con Python</h3>
             <p>Se inicia creando aplicaciones funcionales mediante guías individuales en Python, abordando la lógica de programación y la estructuración de scripts ejecutables.</p>
             <h3>2. Fases Metodológicas de Documentación (Fases 1 a 7)</h3>
-            <p>Se recorre de forma secuencial el ciclo de vida del software: orientaciones, Fase 1, Fase 2-3 (Arquitectura), Fase 4 (Desarrollo), Fase 5 y documentos finales, hasta las Fases 6 y 7, culminando con el ejercicio final y recuperación.</p>
+            <p>Se recorre de forma secuencial el ciclo de vida del software: orientaciones para proyecto, Fase 1, Fase 2-3 (Arquitectura), Fase 4 (Desarrollo), Fase 5 y documentos finales, hasta las Fases 6 y 7, culminando con el ejercicio final y recuperación.</p>
         `,
         preguntas: [
             { t: "¿Qué lenguaje de programación se utiliza en las guías individuales iniciales del Profe Javier?", o: ["Python", "Cobol", "Assembly", "Fortran"], r: 0 },
